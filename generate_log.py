@@ -1,3 +1,11 @@
+"""Top-level shim for AutoTest compatibility.
+
+Some test runners import `generate_log` from the project root. Expose
+`generate_log` here by delegating to `lib.generate_log.generate_log`.
+"""
+from lib.generate_log import generate_log
+
+__all__ = ["generate_log"]
 from datetime import datetime
 
 def generate_log(log_data):
